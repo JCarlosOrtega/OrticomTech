@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orticom Tech - Landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="destacados.css">
+
+</head>
+
+<body data-page="home">
+    <!-- Skip Link para accesibilidad -->
+    <a href="#main" class="skipLink">Ir al contenido principal</a>
+    
+    <!-- Cabecera ( Logo - Menu de navegacion - Buscador) -->
+    <header class="cabecera">
+
+        <div class="logo">
+            <object class="logoVector" type="image/svg+xml" data="img/logo/logoD.svg?v=5" aria-label="Logo Orticom Tech"></object>
+            <span class="textoLogo">ORTICOM TECH</span>
+        </div>
+
+        <input type="checkbox" id="abrirMenu" class="abrirMenu" aria-expanded="false" aria-controls="menuNavegacion">
+
+        <div class="menuNavegacion" id="menuNavegacion">
+            <nav class="navegacion">
+                <a href="index.html" aria-current="page">HOME</a>
+                <a href="producto.html">PRODUCTOS</a>
+                <a href="contacto.html">CONTACTO</a>
+                <a href="destacados.html">DESTACADOS</a>
+            </nav>
+            <div class="buscador">
+                <form action="busqueda.html" method="post" aria-label="Formulario de búsqueda">
+                    <label for="buscadorInput" class="sr-only">Buscar productos</label>
+                    <input type="text" id="buscadorInput" class="buscadorInput" placeholder="Buscar..." aria-label="Campo de búsqueda">
+                    <button type="submit" class="buscadorIcono" aria-label="Buscar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <label for="abrirMenu" class="menuHamburguesa">
+            <img src="img/icon/burguer.png" alt="Menú" loading="lazy">
+        </label>
+
+        <button type="button" class="carritoBoton" data-carrito-toggle aria-expanded="false" aria-controls="carritoPanel" aria-label="Abrir carrito">
+            <img src="img/icon/carro.png" alt="" aria-hidden="true" class="carritoBoton__icono">
+            <span class="carritoCantidad oculto">0</span>
+        </button>
+
+    </header>
+    <!-- MAin - Hero + Productos destacados + Nuestro Equipo -->
+    <main id="main">
+        <section class="carrusel" aria-label="Sección principal del hero">
+            <div class="hero">
+                <div class="imagenHero">
+                    <!-- <img src="img/hero/hero1.png" alt="Nueva oficina de Orticom Tech"> -->
+                </div>
+                <!-- imágenes hero descargadas desde pexels -->
+                <!-- imagen granulado tecnológico de freepik -->
+                <div class="tituloHero">
+                    <h1>NUEVA OFICINA</h1>
+                    <div class="textoHero">
+                        <p>Por fin podemos estrenar nuestra nueva oficina, a la que podrás asistir y ver en persona,
+                            ejemplos de nuestros productos y por supuesto en nuestro escaparate nuestro flamante
+                            merchandising.</p>
+                            <a href="contacto.html" class="btnRojo">Ver mas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Separador animado -->
+        <div class="separadorAnimado" aria-hidden="true"></div>
+
+        <!-- Productos destacados -->
+        <section class="seccion" aria-label="Productos destacados">
+            <div class="tituloSeccion">
+                <h2>PRODUCTOS DESTACADOS</h2>
+                <div class="elementos">
+                    <div class="contenedorProducto">
+                        <div class="imagenProducto producto1">
+                            <a href="#imgProducto1" class="enlaceImagen">
+                                <img src="img/productos/producto1small.png" alt="Aplicación Finan v1.2" loading="lazy">
+                            </a>
+
+                            <div id="imgProducto1" class="imagenAmpliada" role="dialog" aria-modal="true" aria-labelledby="imgProducto1-label">
+                                <h3 id="imgProducto1-label" class="sr-only">Imagen ampliada: Aplicación Finan v1.2</h3>
+                                <button class="cerrarImagen" aria-label="Cerrar imagen ampliada"></button>
+                                <img src="img/productos/producto1.png" alt="Aplicación Finan v1.2 ampliada" loading="lazy">
+                            </div>
+                        </div>
+                        <h3>Finan v1.2 </h3>
+                        <p class="textoResumenProducto">
+                            Aplicación para la empresa EMPRESA SL, diseñada a medida para inversiones y actividades clave.
+                            <span class="textoExtraProducto oculto">Incluye control financiero, panel de seguimiento y automatización de procesos para equipos que necesitan una visión clara del negocio.</span>
+                        </p>
+                        <button type="button" class="btnLeerMas" data-action="leer-mas" aria-expanded="false">Leer más</button>
+                        <a href="producto.html" class="btnRojo">Comprar</a>
+                    </div>
+
+                    <div class="contenedorProducto">
+                        <div class="imagenProducto producto2">
+                            <a href="#imgProducto2" class="enlaceImagen">
+                                <img src="img/productos/producto2small.png" alt="Camiseta Orticom" loading="lazy">
+                            </a>
+
+                            <div id="imgProducto2" class="imagenAmpliada" role="dialog" aria-modal="true" aria-labelledby="imgProducto2-label">
+                                <h3 id="imgProducto2-label" class="sr-only">Imagen ampliada: Camiseta Orticom</h3>
+                                <button class="cerrarImagen" aria-label="Cerrar imagen ampliada"></button>
+                                <img src="img/productos/producto2.png" alt="Camiseta Orticom ampliada" loading="lazy">
+                            </div>
+                        </div>
+                        <h3>Orticom T-Shirt</h3>
+                        <p class="textoResumenProducto">
+                            Nuestro catálogo de merchandising reúne camisetas, sudaderas y polos con identidad propia.
+                            <span class="textoExtraProducto oculto">Piezas pensadas para acompañar la marca con un estilo limpio, cómodo y reconocible en el día a día.</span>
+                        </p>
+                        <button type="button" class="btnLeerMas" data-action="leer-mas" aria-expanded="false">Leer más</button>
+                        <a href="producto.html" class="btnRojo">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner destacado -->
+        <section class="seccion seccionBannerDestacado animacionScroll" aria-label="Banner promocional">
+            <div class="tituloSeccion">
+                <h2 class="tituloBrillo">Destacados de la semana</h2>
+                <p>Selección de lanzamientos y promociones activas de Orticom Tech.</p>
+            </div>
+
+            <div class="contenedorBannerDestacado bordeAnimadoImagen">
+                <iframe data-src="banner/banner.html" class="iframeBannerDestacado" title="Banner promocional de Orticom Tech" loading="lazy"></iframe>
+            </div>
+
+            <div class="accionesDestacado">
+                <a href="destacados.html" class="btnRojo btnPulso">Ver destacados</a>
+            </div>
+        </section>
+
+        <!-- Separador animado -->
+        <div class="separadorAnimado" aria-hidden="true"></div>
+
+        <!-- Nuestro equipo -->
+        <section class="seccion seccionEquipo" aria-label="Nuestro equipo">
+            <div class="tituloSeccion">
+                <h2>NUESTRO EQUIPO</h2>
+                <p>Selecciona una pestaña para ver cada perfil con más detalle.</p>
+            </div>
+
+            <ul class="nav nav-pills equipoTabs" id="equipoTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="maria-tab" data-bs-toggle="tab" data-bs-target="#maria" type="button" role="tab" aria-controls="maria" aria-selected="true">María</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="jose-tab" data-bs-toggle="tab" data-bs-target="#jose" type="button" role="tab" aria-controls="jose" aria-selected="false">José</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="juan-tab" data-bs-toggle="tab" data-bs-target="#juan" type="button" role="tab" aria-controls="juan" aria-selected="false">Juan C.</button>
+                </li>
+            </ul>
+
+            <div class="tab-content equipoTabsContent" id="equipoTabsContent">
+                <div class="tab-pane fade show active" id="maria" role="tabpanel" aria-labelledby="maria-tab" tabindex="0">
+                    <article class="equipoTarjeta">
+                        <div class="imagenEquipo equipo1">
+                            <a href="#imgEquipo1" class="enlaceImagen">
+                                <img src="img/equipo/equipo1small.png" alt="María Pérez" loading="lazy">
+                            </a>
+                            <div id="imgEquipo1" class="imagenAmpliada imagenAmpliadaEquipo" role="dialog" aria-modal="true" aria-labelledby="imgEquipo1-label">
+                                <h3 id="imgEquipo1-label" class="sr-only">Imagen ampliada: Maria Pérez</h3>
+                                <button class="cerrarImagen" aria-label="Cerrar imagen ampliada"></button>
+                                <img src="img/equipo/equipo1.png" alt="Imagen ampliada de María Pérez" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="equipoTarjetaInfo">
+                            <h3>María Pérez</h3>
+                            <p>Programadora especializada en Java, JavaScript y TypeScript. Lidera el desarrollo visual y la integración de interfaces.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="tab-pane fade" id="jose" role="tabpanel" aria-labelledby="jose-tab" tabindex="0">
+                    <article class="equipoTarjeta">
+                        <div class="imagenEquipo equipo2">
+                            <a href="#imgEquipo2" class="enlaceImagen">
+                                <img src="img/equipo/equipo2small.png" alt="José López" loading="lazy">
+                            </a>
+                            <div id="imgEquipo2" class="imagenAmpliada imagenAmpliadaEquipo" role="dialog" aria-modal="true" aria-labelledby="imgEquipo2-label">
+                                <h3 id="imgEquipo2-label" class="sr-only">Imagen ampliada: Jose López</h3>
+                                <button class="cerrarImagen" aria-label="Cerrar imagen ampliada"></button>
+                                <img src="img/equipo/equipo2.png" alt="Imagen ampliada de José López" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="equipoTarjetaInfo">
+                            <h3>José López</h3>
+                            <p>Administrador de bases de datos con experiencia en sistemas relacionales y NoSQL. Se encarga de la estructura y el rendimiento de los datos.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="tab-pane fade" id="juan" role="tabpanel" aria-labelledby="juan-tab" tabindex="0">
+                    <article class="equipoTarjeta">
+                        <div class="imagenEquipo equipo3">
+                            <a href="#imgEquipo3" class="enlaceImagen">
+                                <img src="img/equipo/equipo3small.png" alt="Juan C. Ortega" loading="lazy">
+                            </a>
+                            <div id="imgEquipo3" class="imagenAmpliada imagenAmpliadaEquipo" role="dialog" aria-modal="true" aria-labelledby="imgEquipo3-label">
+                                <h3 id="imgEquipo3-label" class="sr-only">Imagen ampliada: Juan C. Ortega</h3>
+                                <button class="cerrarImagen" aria-label="Cerrar imagen ampliada"></button>
+                                <img src="img/equipo/equipo3.png" alt="Imagen ampliada de Juan C. Ortega" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="equipoTarjetaInfo">
+                            <h3>Juan C. Ortega</h3>
+                            <p>Team leader y programador PHP, JavaScript y TypeScript. Responsable de FINAN, ORGRAN y de la coordinación general del proyecto.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Separador animado -->
+    <div class="separadorAnimado" aria-hidden="true"></div>
+
+    <!-- Footer - Info + RRSS + Contacto y Dark and Light -->
+    <footer class="piePagina" role="contentinfo">
+        <div class="infoFooter">
+            <p>©2026 ORTICOM TECH S.L.</p>
+            <p>C/Mayor 123, Pechina (Almería)</p>
+        </div>
+
+        <nav class="rrss" aria-label="Redes sociales">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/instagram.png" alt="Instagram" loading="lazy"></a>
+            <a href="https://www.x.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/x.png" alt="X"></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/facebook.png" alt="Facebook" loading="lazy"></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/linkedin.png" alt="LinkedIn" loading="lazy"></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/youtube.png" alt="YouTube" loading="lazy"></a>
+            <a href="https://www.twitch.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/twitch.png" alt="Twitch" loading="lazy"></a>
+        </nav>
+
+        <div class="contactFooter">
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Carrito</a>
+            <button class="btnTema" id="botonTema" aria-label="Cambiar tema entre claro y oscuro" aria-pressed="false">
+                <img src="img/icon/LD.svg" alt="" aria-hidden="true" loading="lazy">
+            </button>
+        </div>
+    </footer>
+    <!-- Script para el boton de cambio de tema oscuro/claro -->
+    <script>
+        const botonTema = document.getElementById("botonTema");
+        const body = document.body;
+        const logoPrincipal = document.querySelector(".logo .logoVector, .logo img");
+        const logoModoDark = "img/logo/logoD.svg?v=5";
+        const logoModoLight = "img/logo/logoL.svg?v=5";
+
+        const actualizarLogoTema = () => {
+            if (!logoPrincipal) {
+                return;
+            }
+            const logoObjetivo = body.classList.contains("temaOscuro") ? logoModoLight : logoModoDark;
+
+            if (logoPrincipal.tagName.toLowerCase() === "object") {
+                if (logoPrincipal.getAttribute("data") !== logoObjetivo) {
+                    logoPrincipal.setAttribute("data", logoObjetivo);
+                }
+            } else {
+                logoPrincipal.src = logoObjetivo;
+            }
+        };
+
+        actualizarLogoTema();
+
+        botonTema.addEventListener("click", () => {
+            body.classList.toggle("temaOscuro");
+            actualizarLogoTema();
+
+            // if (body.classList.contains("temaOscuro")) {
+            //     botonTema.background = "Ø";
+            // } else {
+            //     botonTema.textContent = "O";
+            // }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>

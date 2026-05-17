@@ -1,0 +1,75 @@
+.resultadosBusqueda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+
+.tarjetaResultado {
+    display: flex;
+    gap: 24px;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+
+
+.tarjetaResultado .imagenProducto {
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+}
+
+.tarjetaResultado .imagenProducto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.infoResultado {
+    display: flex;
+    flex-direction: column;
+    width: 160px; 
+}
+
+
+.infoResultado h4 {
+    margin: 0 0 6px 0;
+    text-align: left;
+}
+
+.infoResultado .precioProducto {
+    font-size: 18px;
+    margin-bottom: 12px;
+    white-space: nowrap;
+}
+
+.infoResultado .btnRojo {
+    margin-top: auto; 
+    align-self: flex-start;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .tarjetaResultado {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .infoResultado {
+        width: 100%;
+        align-items: center;
+    }
+
+    .infoResultado .btnRojo {
+        align-self: center;
+    }
+
+}

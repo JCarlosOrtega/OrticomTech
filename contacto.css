@@ -1,0 +1,113 @@
+.heroContacto {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.heroContacto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* filtro solo mitad derecha */
+.heroContacto::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(153, 115, 32, 0.45);
+    pointer-events: none;
+}
+
+.textoContacto {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.textoContacto h1,
+.textoContacto p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.contactoMapa .mapa {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 360px;
+}
+
+.contactoMapa iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 5px;
+}
+
+.contactoVideo .videoEmpresa {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.contactoVideo iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.contactoAcordeon {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactoAcordeon .accordion-item {
+    background: var(--negro);
+    color: var(--grisanco);
+    border: 1px solid rgb(229 225 218 / 18%);
+}
+
+.contactoAcordeon .accordion-button {
+    background: var(--negro);
+    color: var(--grisanco);
+    box-shadow: none;
+}
+
+.contactoAcordeon .accordion-button:not(.collapsed) {
+    background: var(--amarillo);
+    color: var(--negro);
+}
+
+.contactoAcordeon .accordion-body {
+    padding: 18px;
+}
+
+
+
+@media (max-width: 768px) {
+
+
+    .heroContacto {
+        height: 260px;
+    }
+}

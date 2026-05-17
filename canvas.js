@@ -1,0 +1,75 @@
+(function () {
+    "use strict";
+
+    const canvasEl = document.getElementById("canvasDestacados");
+
+    if (!canvasEl || !window.fabric) {
+        return;
+    }
+
+    const canvas = new fabric.Canvas(canvasEl, {
+        selection: false
+    });
+
+    class Cross extends fabric.Object {
+        constructor(options = {}) {
+            super(options);
+            this.transparentCorners = false;
+            this.objectCaching = false;
+            this.animDirection = "up";
+
+            this.width = 100;
+            this.height = 100;
+
+            this.w1 = this.h2 = 100;
+            this.h1 = this.w2 = 30;
+            this.color = options.color || "#edc25e";
+        }
+
+        animateWidthHeight() {
+            const interval = 2;
+
+            if (this.h2 >= 30 && this.h2 <= 100) {
+                const actualInterval = this.animDirection === "up" ? interval : -interval;
+                this.h2 += actualInterval;
+                this.w1 += actualInterval;
+            }
+
+            if (this.h2 >= 100) {
+                this.animDirection = "down";
+                this.h2 -= interval;
+                this.w1 -= interval;
+            }
+
+            if (this.h2 <= 30) {
+                this.animDirection = "up";
+                this.h2 += interval;
+                this.w1 += interval;
+            }
+        }
+
+        _render(ctx) {
+            ctx.fillStyle = this.color;
+            ctx.fillRect(-this.w1 / 2, -this.h1 / 2, this.w1, this.h1);
+            ctx.fillRect(-this.w2 / 2, -this.h2 / 2, this.w2, this.h2);
+        }
+    }
+
+    canvas.add(
+        new Cross({ top: 80, left: 100 }),
+        new Cross({ top: 140, left: 260 }),
+        new Cross({ top: 210, left: 420 }),
+        new Cross({ top: 90, left: 580 }),
+        new Cross({ top: 180, left: 760 })
+    );
+
+    requestAnimationFrame(function animate() {
+        canvas.forEachObject((obj) => {
+            if (typeof obj.animateWidthHeight === "function") {
+                obj.animateWidthHeight();
+            }
+        });
+        canvas.requestRenderAll();
+        requestAnimationFrame(animate);
+    });
+})();

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orticom Tech - Productos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="producto.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body data-page="productos">
+    <a href="#main" class="skipLink">Ir al contenido principal</a>
+
+    <header class="cabecera">
+        <div class="logo">
+            <object class="logoVector" type="image/svg+xml" data="img/logo/logoD.svg?v=5" aria-label="Logo Orticom Tech"></object>
+            <span class="textoLogo">ORTICOM TECH</span>
+        </div>
+
+        <input type="checkbox" id="abrirMenu" class="abrirMenu" aria-expanded="false" aria-controls="menuNavegacion">
+
+        <div class="menuNavegacion" id="menuNavegacion">
+            <nav class="navegacion">
+                <a href="index.html">HOME</a>
+                <a href="producto.html" aria-current="page">PRODUCTOS</a>
+                <a href="contacto.html">CONTACTO</a>
+                <a href="destacados.html">DESTACADOS</a>
+            </nav>
+            <div class="buscador">
+                <form action="busqueda.html" method="post" aria-label="Formulario de búsqueda">
+                    <label for="buscadorInput" class="sr-only">Buscar productos</label>
+                    <input type="text" id="buscadorInput" class="buscadorInput" placeholder="Buscar..." aria-label="Campo de búsqueda">
+                    <button type="submit" class="buscadorIcono" aria-label="Buscar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <label for="abrirMenu" class="menuHamburguesa">
+            <img src="img/icon/burguer.png" alt="Menú" loading="lazy">
+        </label>
+
+        <button type="button" class="carritoBoton" data-carrito-toggle aria-expanded="false" aria-controls="carritoPanel" aria-label="Abrir carrito">
+            <img src="img/icon/carro.png" alt="" aria-hidden="true" class="carritoBoton__icono">
+            <span class="carritoCantidad oculto">0</span>
+        </button>
+    </header>
+
+    <main id="main">
+        <section class="seccion seccionCatalogoProductos">
+            <div class="tituloSeccion">
+                <h1>Productos</h1>
+                <p>Todos los productos están visibles en una sola vista para comparar mejor las opciones.</p>
+            </div>
+
+            <div class="gridCatalogoProductos">
+                <article class="productoCatalogo" id="finan">
+                    <img src="img/productos/producto1.png" alt="Aplicación Finan v1.2" loading="lazy">
+                    <div class="productoCatalogoInfo">
+                        <h2>Finan v1.2</h2>
+                        <p>Aplicación empresarial para la gestión avanzada de inversiones desarrollada a medida.</p>
+                        <p class="precioProducto">299 €</p>
+                        <div class="selectorCantidadProducto" aria-label="Cantidad de Finan v1.2">
+                            <button type="button" class="btnIconoCarrito btnCantidadProducto" data-action="cantidad-restar" data-id="finan" aria-label="Restar una unidad">
+                                <img src="img/icon/menos.svg" alt="" aria-hidden="true">
+                            </button>
+                            <span class="cantidadProducto" data-cantidad="finan">1</span>
+                            <button type="button" class="btnIconoCarrito btnCantidadProducto" data-action="cantidad-sumar" data-id="finan" aria-label="Sumar una unidad">
+                                <img src="img/icon/mas.svg" alt="" aria-hidden="true">
+                            </button>
+                        </div>
+                        <button type="button" class="btnRojo productoBotonCarrito" data-action="anadir" data-id="finan">
+                            <img src="img/icon/carro.png" alt="" aria-hidden="true" class="productoBotonIcono">
+                            <span>Añadir al carrito</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="productoCatalogo" id="orgran">
+                    <img src="img/productos/producto3.png" alt="Aplicación Orgran" loading="lazy">
+                    <div class="productoCatalogoInfo">
+                        <h2>Orgran</h2>
+                        <p>Software de organización interna para empresas con múltiples departamentos.</p>
+                        <p class="precioProducto">249 €</p>
+                        <div class="selectorCantidadProducto" aria-label="Cantidad de Orgran">
+                            <button type="button" class="btnIconoCarrito btnCantidadProducto" data-action="cantidad-restar" data-id="orgran" aria-label="Restar una unidad">
+                                <img src="img/icon/menos.svg" alt="" aria-hidden="true">
+                            </button>
+                            <span class="cantidadProducto" data-cantidad="orgran">1</span>
+                            <button type="button" class="btnIconoCarrito btnCantidadProducto" data-action="cantidad-sumar" data-id="orgran" aria-label="Sumar una unidad">
+                                <img src="img/icon/mas.svg" alt="" aria-hidden="true">
+                            </button>
+                        </div>
+                        <button type="button" class="btnRojo productoBotonCarrito" data-action="anadir" data-id="orgran">
+                            <img src="img/icon/carro.png" alt="" aria-hidden="true" class="productoBotonIcono">
+                            <span>Añadir al carrito</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="productoCatalogo" id="camiseta">
+                    <img src="img/productos/camiseta.png" alt="Camiseta Orticom" loading="lazy">
+                    <div class="productoCatalogoInfo">
+                        <h2>Camiseta Orticom</h2>
+                        <p>Merchandising oficial para llevar la marca en tu día a día.</p>
+                        <p class="precioProducto">19 €</p>
+                        <div class="selectorCantidadProducto" aria-label="Cantidad de Camiseta Orticom">
+                            <button type="button" class="btnIconoCarrito btnCantidadProducto" data-action="cantidad-restar" data-id="camiseta" aria-label="Restar una unidad">
+                                <img src="img/icon/menos.svg" alt="" aria-hidden="true">
+                            </button>
+                            <span class="cantidadProducto" data-cantidad="camiseta">1</span>
+                            <button type="button" class="btnIconoCarrito btnCantidadProducto" data-action="cantidad-sumar" data-id="camiseta" aria-label="Sumar una unidad">
+                                <img src="img/icon/mas.svg" alt="" aria-hidden="true">
+                            </button>
+                        </div>
+                        <button type="button" class="btnRojo productoBotonCarrito" data-action="anadir" data-id="camiseta">
+                            <img src="img/icon/carro.png" alt="" aria-hidden="true" class="productoBotonIcono">
+                            <span>Añadir al carrito</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="productoCatalogo" id="sudadera">
+                    <img src="img/productos/sudadera.png" alt="Sudadera Orticom" loading="lazy">
+                    <div class="productoCatalogoInfo">
+                        <h2>Sudadera Orticom</h2>
+                        <p>Sudadera cómoda con el estilo de la marca.</p>
+                        <p class="precioProducto">39 €</p>
+                        <div class="selectorCantidadProducto" aria-label="Cantidad de Sudadera Orticom">
+                            <button type="button" class="btnIconoCarrito btnCantidadProducto" data-action="cantidad-restar" data-id="sudadera" aria-label="Restar una unidad">
+                                <img src="img/icon/menos.svg" alt="" aria-hidden="true">
+                            </button>
+                            <span class="cantidadProducto" data-cantidad="sudadera">1</span>
+                            <button type="button" class="btnIconoCarrito btnCantidadProducto" data-action="cantidad-sumar" data-id="sudadera" aria-label="Sumar una unidad">
+                                <img src="img/icon/mas.svg" alt="" aria-hidden="true">
+                            </button>
+                        </div>
+                        <button type="button" class="btnRojo productoBotonCarrito" data-action="anadir" data-id="sudadera">
+                            <img src="img/icon/carro.png" alt="" aria-hidden="true" class="productoBotonIcono">
+                            <span>Añadir al carrito</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="productoCatalogo" id="polo">
+                    <img src="img/productos/polo.png" alt="Polo Orticom" loading="lazy">
+                    <div class="productoCatalogoInfo">
+                        <h2>Polo Orticom</h2>
+                        <p>Un básico sencillo para completar el merchandising de la web.</p>
+                        <p class="precioProducto">29 €</p>
+                        <div class="selectorCantidadProducto" aria-label="Cantidad de Polo Orticom">
+                            <button type="button" class="btnIconoCarrito btnCantidadProducto" data-action="cantidad-restar" data-id="polo" aria-label="Restar una unidad">
+                                <img src="img/icon/menos.svg" alt="" aria-hidden="true">
+                            </button>
+                            <span class="cantidadProducto" data-cantidad="polo">1</span>
+                            <button type="button" class="btnIconoCarrito btnCantidadProducto" data-action="cantidad-sumar" data-id="polo" aria-label="Sumar una unidad">
+                                <img src="img/icon/mas.svg" alt="" aria-hidden="true">
+                            </button>
+                        </div>
+                        <button type="button" class="btnRojo productoBotonCarrito" data-action="anadir" data-id="polo">
+                            <img src="img/icon/carro.png" alt="" aria-hidden="true" class="productoBotonIcono">
+                            <span>Añadir al carrito</span>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="piePagina" role="contentinfo">
+        <div class="infoFooter">
+            <p>©2026 ORTICOM TECH S.L.</p>
+            <p>C/Mayor 123, Pechina (Almería)</p>
+        </div>
+
+        <nav class="rrss" aria-label="Redes sociales">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/instagram.png" alt="Instagram" loading="lazy"></a>
+            <a href="https://www.x.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/x.png" alt="X"></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/facebook.png" alt="Facebook" loading="lazy"></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/linkedin.png" alt="LinkedIn" loading="lazy"></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/youtube.png" alt="YouTube" loading="lazy"></a>
+            <a href="https://www.twitch.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/twitch.png" alt="Twitch" loading="lazy"></a>
+        </nav>
+
+        <div class="contactFooter">
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Carrito</a>
+            <button class="btnTema" id="botonTema" aria-label="Cambiar tema entre claro y oscuro" aria-pressed="false">
+                <img src="img/icon/LD.svg" alt="" aria-hidden="true" loading="lazy">
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        const botonTema = document.getElementById("botonTema");
+        const body = document.body;
+        const logoPrincipal = document.querySelector(".logo .logoVector, .logo img");
+        const logoModoDark = "img/logo/logoD.svg?v=5";
+        const logoModoLight = "img/logo/logoL.svg?v=5";
+
+        const actualizarLogoTema = () => {
+            if (!logoPrincipal) {
+                return;
+            }
+            const logoObjetivo = body.classList.contains("temaOscuro") ? logoModoLight : logoModoDark;
+
+            if (logoPrincipal.tagName.toLowerCase() === "object") {
+                if (logoPrincipal.getAttribute("data") !== logoObjetivo) {
+                    logoPrincipal.setAttribute("data", logoObjetivo);
+                }
+            } else {
+                logoPrincipal.src = logoObjetivo;
+            }
+        };
+
+        actualizarLogoTema();
+
+        botonTema.addEventListener("click", () => {
+            body.classList.toggle("temaOscuro");
+            actualizarLogoTema();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

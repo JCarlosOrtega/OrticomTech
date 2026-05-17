@@ -1,0 +1,359 @@
+:root {
+    --amarilloBrillo: color-mix(in srgb, var(--amarillo) 70%, white);
+    --azulonSuave: color-mix(in srgb, var(--azulon) 65%, white);
+    --negroSuave: color-mix(in srgb, var(--negro) 85%, var(--grisosc));
+    --bordeSize: 2px;
+    --anchoBanner: 220px;
+    --anchoBannerMovil: 200px;
+}
+
+.seccionBannerDestacado {
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+.seccionBannerDestacado .tituloSeccion {
+    text-align: center;
+}
+
+.seccionBannerDestacado .tituloSeccion p {
+    margin: 0;
+    color: var(--grisanco);
+    opacity: 0.9;
+}
+
+/* brillo continuo en titulo----------------------*/
+.tituloBrillo {
+    display: inline-block;
+    color: transparent;
+    background-image: linear-gradient(90deg, var(--grisanco) 10%, var(--amarillo) 45%, var(--grisanco) 80%);
+    background-size: 220% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: brilloTitulo 4.2s linear infinite;
+}
+
+.contenedorBannerDestacado {
+    position: relative;
+    max-width: calc(var(--anchoBanner) + 16px);
+    margin: 22px auto 0;
+    padding: 8px;
+    border-radius: 12px;
+    background-color: var(--negroSuave);
+}
+
+/* Borde animado -------------------------------------- */
+.bordeAnimadoImagen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: var(--bordeSize);
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--amarillo), var(--azulon), var(--rojito), var(--amarillo));
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    animation: movimientoColorBorde 3s linear infinite;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.iframeBannerDestacado {
+    position: relative;
+    width: min(100%, var(--anchoBanner));
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 8px;
+    background-color: var(--grisanco);
+    aspect-ratio: 6 / 5;
+}
+
+.accionesDestacado {
+    margin-top: 22px;
+    text-align: center;
+}
+
+/* pulse en CTA------------------------------ */
+.btnPulso {
+    position: relative;
+    display: inline-block;
+    animation: pulsoCTA 1.15s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+    transform-origin: center;
+}
+
+.btnPulso::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border: 2px solid rgb(237 194 94 / 70%);
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    animation: pulsoHalo 1.15s ease-out infinite;
+}
+
+.chipsDestacados {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* flotacion escalonada ---------------------------------------- */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    background: linear-gradient(130deg, rgb(113 155 226 / 24%), rgb(237 194 94 / 27%));
+    border: 1px solid rgb(229 225 218 / 28%);
+    font-size: 0.88rem;
+    letter-spacing: 0.4px;
+    color: var(--grisanco);
+    animation: flotacionChip 3s ease-in-out infinite;
+}
+
+.chipDos {
+    animation-delay: 0.25s;
+}
+
+.chipTres {
+    animation-delay: 0.5s;
+}
+
+.seccionProductos {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.seccionCanvasEstatico {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.seccionCanvasEstatico .tituloSeccion {
+    text-align: center;
+}
+
+.seccionCanvasEstatico .tituloSeccion p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.contenedorCanvasEstatico {
+    width: min(100%, 960px);
+    margin: 20px auto 0;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgb(229 225 218 / 20%);
+    background: linear-gradient(180deg, rgb(229 225 218 / 7%), rgb(229 225 218 / 2%));
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.canvasDestacados {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid rgb(229 225 218 / 18%);
+    background: linear-gradient(135deg, rgb(16 26 39 / 96%), rgb(21 18 14 / 96%));
+}
+
+.seccionProductos .tituloSeccion {
+    text-align: center;
+}
+
+.seccionProductos .tituloSeccion p {
+    margin-top: -8px;
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+.gridProductos {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* hover + teclado----------------------- */
+.productoDestacado {
+    text-decoration: none;
+    color: var(--grisanco);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid rgb(229 225 218 / 16%);
+    background: linear-gradient(180deg, rgb(229 225 218 / 8%), rgb(229 225 218 / 3%));
+    transition: transform 0.35s ease, background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.productoDestacado img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgb(229 225 218 / 20%);
+    box-shadow: 0 10px 22px rgb(0 0 0 / 35%);
+}
+
+.productoDestacado h3 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.productoDestacado p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.productoDestacado:hover,
+.productoDestacado:focus-visible {
+    transform: translateY(-4px) scale(1.03);
+    background: linear-gradient(180deg, rgb(113 155 226 / 22%), rgb(237 194 94 / 15%));
+    border-color: rgb(237 194 94 / 52%);
+    box-shadow: 0 16px 28px rgb(0 0 0 / 42%);
+    outline: none;
+}
+
+.productoDestacado:focus-visible {
+    box-shadow: 0 0 0 2px var(--amarilloBrillo), 0 16px 28px rgb(0 0 0 / 42%);
+}
+
+/* scroll-driven CSS moderno------------------------- */
+@supports (animation-timeline: view()) {
+    .animacionScroll {
+        opacity: 0;
+        transform: translateY(36px) scale(0.98);
+        animation: entradaScroll both ease-out;
+        animation-timeline: view();
+        animation-range: entry 12% cover 40%;
+    }
+}
+
+@keyframes movimientoColorBorde {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 0%;
+    }
+}
+
+@keyframes pulsoCTA {
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgb(205 92 92 / 55%), 0 0 0 0 rgb(237 194 94 / 50%);
+    }
+    45% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 13px rgb(205 92 92 / 0%), 0 0 0 20px rgb(237 194 94 / 0%);
+    }
+    65% {
+        transform: scale(1.06);
+    }
+}
+
+@keyframes pulsoHalo {
+    0% {
+        opacity: 0.75;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes entradaScroll {
+    from {
+        opacity: 0;
+        transform: translateY(36px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes brilloTitulo {
+    from {
+        background-position: 200% 0;
+    }
+    to {
+        background-position: -20% 0;
+    }
+}
+
+@keyframes flotacionChip {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@media (max-width: 900px) {
+    .gridProductos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .seccionBannerDestacado,
+    .seccionCanvasEstatico,
+    .seccionProductos {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .contenedorCanvasEstatico {
+        padding: 8px;
+    }
+
+    .contenedorBannerDestacado {
+        margin-top: 20px;
+        max-width: calc(var(--anchoBannerMovil) + 16px);
+    }
+
+    .iframeBannerDestacado {
+        width: 100%;
+        max-width: var(--anchoBannerMovil);
+    }
+
+    .gridProductos {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .separadorAnimado {
+        width: calc(100% - 28px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tituloBrillo,
+    .btnPulso,
+    .btnPulso::after,
+    .chip,
+    .separadorAnimado::before,
+    .bordeAnimadoImagen::before,
+    .animacionScroll {
+        animation: none !important;
+        transform: none !important;
+    }
+}

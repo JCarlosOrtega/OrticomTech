@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orticom Tech - Landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="producto.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="busqueda.css">
+
+</head>
+
+<body data-page="busqueda">
+    <!-- Skip Link para accesibilidad -->
+    <a href="#main" class="skipLink">Ir al contenido principal</a>
+    
+    <!-- Cabecera ( Logo - Menu de navegacion - Buscador) -->
+    <header class="cabecera">
+
+        <div class="logo">
+            <object class="logoVector" type="image/svg+xml" data="img/logo/logoD.svg?v=5" aria-label="Logo Orticom Tech"></object>
+            <span class="textoLogo">ORTICOM TECH</span>
+        </div>
+
+        <input type="checkbox" id="abrirMenu" class="abrirMenu" aria-expanded="false" aria-controls="menuNavegacion">
+
+        <div class="menuNavegacion" id="menuNavegacion">
+            <nav class="navegacion">
+                <a href="index.html">HOME</a>
+                <a href="producto.html">PRODUCTOS</a>
+                <a href="contacto.html">CONTACTO</a>
+                <a href="destacados.html">DESTACADOS</a>
+            </nav>
+            <div class="buscador">
+                <form action="busqueda.html" method="post" aria-label="Formulario de búsqueda">
+                    <label for="buscadorInput" class="sr-only">Buscar productos</label>
+                    <input type="text" id="buscadorInput" class="buscadorInput" placeholder="Buscar..." aria-label="Campo de búsqueda">
+                    <button type="submit" class="buscadorIcono" aria-label="Buscar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <label for="abrirMenu" class="menuHamburguesa">
+            <img src="img/icon/burguer.png" alt="Menú">
+        </label>
+
+        <button type="button" class="carritoBoton" data-carrito-toggle aria-expanded="false" aria-controls="carritoPanel" aria-label="Abrir carrito">
+            <img src="img/icon/carro.png" alt="" aria-hidden="true" class="carritoBoton__icono">
+            <span class="carritoCantidad oculto">0</span>
+        </button>
+
+    </header>
+
+
+    <main id="main">
+        <!-- Busqueda de productos 2 app + 2 merch -->
+        <section class="seccionProductos" aria-label="Resultados de búsqueda">
+            <h1 class="tituloSeccionProductos">Resultados de búsqueda</h1>
+            <div class="resultadosBusqueda">
+
+                <div class="tarjetaResultado">
+                    <div class="imagenProducto">
+                        <img src="img/productos/producto1.png" alt="Aplicación Finan v1.2 para gestión de inversiones">
+                    </div>
+                    <div class="infoResultado">
+                        <h4>Finan v1.2</h4>
+                        <p class="precioProducto">299 €</p>
+                        <a href="producto.html">
+                            <button class="btnRojo">Ver producto</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tarjetaResultado">
+                    <div class="imagenProducto">
+                        <img src="img/productos/producto3.png" alt="Aplicación Orgran para organización empresarial">
+                    </div>
+                    <div class="infoResultado">
+                        <h4>Orgran</h4>
+                        <p class="precioProducto">249 €</p>
+                        <a href="producto.html">
+                            <button class="btnRojo">Ver producto</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tarjetaResultado">
+                    <div class="imagenProducto">
+                        <img src="img/productos/camiseta.png" alt="Camiseta oficial Orticom Tech">
+                    </div>
+                    <div class="infoResultado">
+                        <h4>Camiseta Orticom</h4>
+                        <p class="precioProducto">19 €</p>
+                        <a href="producto.html">
+                            <button class="btnRojo">Ver producto</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tarjetaResultado">
+                    <div class="imagenProducto">
+                        <img src="img/productos/sudadera.png" alt="Sudadera oficial Orticom Tech">
+                    </div>
+                    <div class="infoResultado">
+                        <h4>Sudadera Orticom</h4>
+                        <p class="precioProducto">39 €</p>
+                        <a href="producto.html">
+                            <button class="btnRojo">Ver producto</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Separador animado -->
+    <div class="separadorAnimado" aria-hidden="true"></div>
+
+
+    <!-- Footer - Info + RRSS + Contacto y Dark and Light -->
+    <footer class="piePagina" role="contentinfo">
+        <div class="infoFooter">
+            <p>©2026 ORTICOM TECH S.L.</p>
+            <p>C/Mayor 123, Pechina (Almería)</p>
+        </div>
+
+        <nav class="rrss" aria-label="Redes sociales">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/instagram.png" alt="Instagram"></a>
+            <a href="https://www.x.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/x.png" alt="X"></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/facebook.png" alt="Facebook"></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/youtube.png" alt="YouTube"></a>
+            <a href="https://www.twitch.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/twitch.png" alt="Twitch"></a>
+        </nav>
+
+        <div class="contactFooter">
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Carrito</a>
+            <button class="btnTema" id="botonTema" aria-label="Cambiar tema entre claro y oscuro" aria-pressed="false">
+                <img src="img/icon/LD.svg" alt="" aria-hidden="true" loading="lazy">
+            </button>
+        </div>
+    </footer>
+    <!-- Script para el boton de cambio de tema oscuro/claro -->
+    <script>
+        const botonTema = document.getElementById("botonTema");
+        const body = document.body;
+        const logoPrincipal = document.querySelector(".logo .logoVector, .logo img");
+        const logoModoDark = "img/logo/logoD.svg?v=5";
+        const logoModoLight = "img/logo/logoL.svg?v=5";
+
+        const actualizarLogoTema = () => {
+            if (!logoPrincipal) {
+                return;
+            }
+            const logoObjetivo = body.classList.contains("temaOscuro") ? logoModoLight : logoModoDark;
+
+            if (logoPrincipal.tagName.toLowerCase() === "object") {
+                if (logoPrincipal.getAttribute("data") !== logoObjetivo) {
+                    logoPrincipal.setAttribute("data", logoObjetivo);
+                }
+            } else {
+                logoPrincipal.src = logoObjetivo;
+            }
+        };
+
+        actualizarLogoTema();
+
+        botonTema.addEventListener("click", () => {
+            body.classList.toggle("temaOscuro");
+            actualizarLogoTema();
+
+            // if (body.classList.contains("temaOscuro")) {
+            //     botonTema.background = "Ø";
+            // } else {
+            //     botonTema.textContent = "O";
+            // }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+</body>

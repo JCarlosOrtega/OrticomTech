@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin" />
+    <title>Orticom Tech - Landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="contacto.css">
+
+</head>
+
+<body data-page="contacto">
+    <!-- Skip Link para accesibilidad -->
+    <a href="#main" class="skipLink">Ir al contenido principal</a>
+    
+    <!-- Cabecera ( Logo - Menu de navegacion - Buscador) -->
+    <header class="cabecera">
+
+        <div class="logo">
+            <object class="logoVector" type="image/svg+xml" data="img/logo/logoD.svg?v=5" aria-label="Logo Orticom Tech"></object>
+            <span class="textoLogo">ORTICOM TECH</span>
+        </div>
+
+        <input type="checkbox" id="abrirMenu" class="abrirMenu" aria-expanded="false" aria-controls="menuNavegacion">
+
+        <div class="menuNavegacion" id="menuNavegacion">
+            <nav class="navegacion">
+                <a href="index.html">HOME</a>
+                <a href="producto.html">PRODUCTOS</a>
+                <a href="contacto.html" aria-current="page">CONTACTO</a>
+                <a href="destacados.html">DESTACADOS</a>
+            </nav>
+            <div class="buscador">
+                <form action="busqueda.html" method="post" aria-label="Formulario de búsqueda">
+                    <label for="buscadorInput" class="sr-only">Buscar productos</label>
+                    <input type="text" id="buscadorInput" class="buscadorInput" placeholder="Buscar..." aria-label="Campo de búsqueda">
+                    <button type="submit" class="buscadorIcono" aria-label="Buscar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <label for="abrirMenu" class="menuHamburguesa">
+            <img src="img/icon/burguer.png" alt="Menú" loading="lazy">
+        </label>
+
+        <button type="button" class="carritoBoton" data-carrito-toggle aria-expanded="false" aria-controls="carritoPanel" aria-label="Abrir carrito">
+            <img src="img/icon/carro.png" alt="" aria-hidden="true" class="carritoBoton__icono">
+            <span class="carritoCantidad oculto">0</span>
+        </button>
+
+    </header>
+
+    <main id="main">
+
+        <!-- imagen ------------------------->
+        <section class="seccion contactoPresentacion">
+
+            <div class="heroContacto">
+                <img src="img/equipo/pexelsequipo.jpg" alt="Equipo de desarrollo trabajando en la oficina">
+            </div>
+
+            <div class="textoContacto">
+                <h1>Contacto</h1>
+                <address>
+                    <p>©2026 ORTICOM TECH S.L.</p>
+                    <p>C/Mayor 123, Pechina (Almería)</p>
+                    <p><a href="mailto:contacto@Orticomtech.es">contacto@Orticomtech.es</a></p>
+                    <p><a href="tel:+34612345678">+34 612345678</a></p>
+                </address>
+                <p>
+                    En Orticom Tech desarrollamos soluciones tecnológicas a medida para empresas,
+                    combinando software profesional con una identidad cercana y moderna.
+                </p>
+                <p>
+                    Nuestro equipo trabaja desde Almería ofreciendo servicios digitales,
+                    aplicaciones empresariales y productos de marca propios.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Separador animado -->
+        <div class="separadorAnimado" aria-hidden="true"></div>
+
+        <section class="seccion contactoAcordeon" aria-label="Mapa y vídeo de contacto">
+            <div class="accordion accordion-flush" id="acordeonContacto">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="encabezadoMapa">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelMapa" aria-expanded="false" aria-controls="panelMapa">
+                            Dónde estamos
+                        </button>
+                    </h2>
+                    <div id="panelMapa" class="accordion-collapse collapse" aria-labelledby="encabezadoMapa" data-bs-parent="#acordeonContacto">
+                        <div class="accordion-body">
+                            <div class="mapa">
+                                <iframe src="https://www.google.com/maps?q=IES%20Pechina&output=embed" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade" title="Mapa interactivo de Google Maps" aria-label="Mapa interactivo de Google Maps">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="encabezadoVideo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelVideo" aria-expanded="false" aria-controls="panelVideo">
+                            Conócenos
+                        </button>
+                    </h2>
+                    <div id="panelVideo" class="accordion-collapse collapse" aria-labelledby="encabezadoVideo" data-bs-parent="#acordeonContacto">
+                        <div class="accordion-body">
+                            <div class="videoEmpresa">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Pixf6U7x-18?si=PG7Ou7QAw0dMFmwS&cc_load_policy=1"
+                                    title="Video de presentación de Orticom Tech" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="no-referrer-when-downgrade" allowfullscreen aria-label="Vídeo presentación empresa en YouTube"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- Separador animado -->
+    <div class="separadorAnimado" aria-hidden="true"></div>
+
+    <!-- Footer - Info + RRSS + Contacto y Dark and Light -->
+    <footer class="piePagina" role="contentinfo">
+        <div class="infoFooter">
+            <p>©2026 ORTICOM TECH S.L.</p>
+            <p>C/Mayor 123, Pechina (Almería)</p>
+        </div>
+
+        <nav class="rrss" aria-label="Redes sociales">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/instagram.png" alt="Instagram"
+                    loading="lazy"></a>
+            <a href="https://www.x.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/x.png" alt="X"></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/facebook.png" alt="Facebook"
+                    loading="lazy"></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/linkedin.png" alt="LinkedIn"
+                    loading="lazy"></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/youtube.png" alt="YouTube"
+                    loading="lazy"></a>
+            <a href="https://www.twitch.com" target="_blank" rel="noopener noreferrer"><img src="img/icon/twitch.png" alt="Twitch"
+                    loading="lazy"></a>
+        </nav>
+
+        <div class="contactFooter">
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Carrito</a>
+            <button class="btnTema" id="botonTema" aria-label="Cambiar tema entre claro y oscuro" aria-pressed="false">
+                <img src="img/icon/LD.svg" alt="" aria-hidden="true" loading="lazy">
+            </button>
+        </div>
+    </footer>
+    <!-- Script para el boton de cambio de tema oscuro/claro -->
+    <script>
+        const botonTema = document.getElementById("botonTema");
+        const body = document.body;
+        const logoPrincipal = document.querySelector(".logo .logoVector, .logo img");
+        const logoModoDark = "img/logo/logoD.svg?v=5";
+        const logoModoLight = "img/logo/logoL.svg?v=5";
+
+        const actualizarLogoTema = () => {
+            if (!logoPrincipal) {
+                return;
+            }
+            const logoObjetivo = body.classList.contains("temaOscuro") ? logoModoLight : logoModoDark;
+
+            if (logoPrincipal.tagName.toLowerCase() === "object") {
+                if (logoPrincipal.getAttribute("data") !== logoObjetivo) {
+                    logoPrincipal.setAttribute("data", logoObjetivo);
+                }
+            } else {
+                logoPrincipal.src = logoObjetivo;
+            }
+        };
+
+        actualizarLogoTema();
+
+        if (botonTema) {
+            botonTema.addEventListener("click", () => {
+                body.classList.toggle("temaOscuro");
+                actualizarLogoTema();
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
