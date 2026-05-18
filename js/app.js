@@ -553,6 +553,17 @@ function configurarEventosGlobales() {
             return;
         }
 
+        const estrella = evento.target.closest(".estrella");
+        if (estrella) {
+            const contenedor = estrella.closest(".valoracionProducto");
+            if (contenedor) {
+                const productoId = contenedor.dataset.producto;
+                const calificacion = Number.parseInt(estrella.dataset.valor, 10);
+                guardarValoracion(productoId, calificacion);
+                return;
+            }
+        }
+
         if (boton.matches("[data-carrito-toggle]")) {
             togglePanelCarrito();
             return;
@@ -627,25 +638,6 @@ function configurarEventosGlobales() {
         if (accion === "finalizar-compra") {
             finalizarCompra();
         }
-    });
-
-    document.addEventListener("click", (evento) => {
-        const estrella = evento.target.closest(".estrella");
-
-        if (!estrella) {
-            return;
-        }
-
-        const contenedor = estrella.closest(".valoracionProducto");
-
-        if (!contenedor) {
-            return;
-        }
-
-        const productoId = contenedor.dataset.producto;
-        const calificacion = Number.parseInt(estrella.dataset.valor, 10);
-
-        guardarValoracion(productoId, calificacion);
     });
 
     document.addEventListener("keydown", (evento) => {

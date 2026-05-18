@@ -236,20 +236,21 @@
     border: none;
     padding: 0;
     font-size: 1.2rem;
-    color: #ffc107;
+    color: #999;
     cursor: pointer;
     transition: all 0.2s ease;
-    opacity: 0.6;
     line-height: 1;
+    text-shadow: 0 0 0 transparent;
 }
 
 .estrella:hover {
-    opacity: 1;
+    color: #ffb700;
     transform: scale(1.15);
 }
 
 .estrella.seleccionada {
-    opacity: 1;
+    color: #ffc107;
+    text-shadow: 0 0 8px rgba(255, 193, 7, 0.6);
 }
 
 .puntuacionTexto {
