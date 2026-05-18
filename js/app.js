@@ -688,10 +688,6 @@ function configurarBanner() {
 }
 
 function configurarBotonSubir() {
-    if (!document.querySelector(".carrusel")) {
-        return;
-    }
-
     if (document.querySelector("#btnSubir")) {
         return;
     }
