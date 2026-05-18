@@ -1,4 +1,5 @@
 const STORAGE_KEY = "orticom_carrito";
+const VALORACIONES_KEY = "orticom_valoraciones";
 
 const PRODUCTOS = [
     {
@@ -52,6 +53,7 @@ function iniciarApp() {
     asegurarModalEliminar();
 
     renderCarrito();
+    renderizarValoraciones();
     configurarEventosGlobales();
     configurarTema();
     configurarBanner();
@@ -508,6 +510,41 @@ function pedirEliminarProducto(id) {
     modalEliminar.show();
 }
 
+function cargarValoraciones() {
+    try {
+        const guardado = localStorage.getItem(VALORACIONES_KEY);
+        return guardado ? JSON.parse(guardado) : {};
+    } catch {
+        return {};
+    }
+}
+
+function guardarValoracion(productoId, calificacion) {
+    const valoraciones = cargarValoraciones();
+    valoraciones[productoId] = {
+        puntuacion: calificacion,
+        fecha: new Date().toISOString()
+    };
+    localStorage.setItem(VALORACIONES_KEY, JSON.stringify(valoraciones));
+    renderizarValoraciones();
+    mostrarNotificacion(`Gracias por valorar con ${calificacion} estrellas`, "exito");
+}
+
+function renderizarValoraciones() {
+    const valoraciones = cargarValoraciones();
+
+    document.querySelectorAll(".valoracionProducto").forEach((contenedor) => {
+        const productoId = contenedor.dataset.producto;
+        const valoracion = valoraciones[productoId];
+        const puntuacion = valoracion ? Math.round(valoracion.puntuacion) : 0;
+
+        contenedor.querySelectorAll(".estrella").forEach((estrella) => {
+            const valor = Number.parseInt(estrella.dataset.valor, 10);
+            estrella.classList.toggle("seleccionada", valor <= puntuacion);
+        });
+    });
+}
+
 function configurarEventosGlobales() {
     document.addEventListener("click", (evento) => {
         const boton = evento.target.closest("button, a");
@@ -590,6 +627,25 @@ function configurarEventosGlobales() {
         if (accion === "finalizar-compra") {
             finalizarCompra();
         }
+    });
+
+    document.addEventListener("click", (evento) => {
+        const estrella = evento.target.closest(".estrella");
+
+        if (!estrella) {
+            return;
+        }
+
+        const contenedor = estrella.closest(".valoracionProducto");
+
+        if (!contenedor) {
+            return;
+        }
+
+        const productoId = contenedor.dataset.producto;
+        const calificacion = Number.parseInt(estrella.dataset.valor, 10);
+
+        guardarValoracion(productoId, calificacion);
     });
 
     document.addEventListener("keydown", (evento) => {
