@@ -250,7 +250,7 @@ function renderMiniCarrito() {
                     <button type="button" class="btn btn-outline-light btn-sm btnIconoCarrito" data-action="sumar" data-id="${item.id}" aria-label="Sumar una unidad">
                         <img src="img/icon/mas.svg" alt="" aria-hidden="true">
                     </button>
-                    <button type="button" class="btn btn-outline-danger btn-sm" data-action="eliminar" data-id="${item.id}">Quitar</button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-action="preguntar-eliminar" data-id="${item.id}">Quitar</button>
                 </div>
             </li>
         `;

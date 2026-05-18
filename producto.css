@@ -218,6 +218,13 @@
     margin: 0;
 }
 
+.valoracionProducto {
+    color: #ffc107;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
 .productoBotonCarrito {
     align-self: flex-start;
     display: inline-flex;
